@@ -139,6 +139,15 @@ export class Scraper {
     this.useGuestAuth();
   }
 
+  public async loginWithV2(
+    appKey: string,
+    appSecret: string,
+    accessToken: string,
+    accessSecret: string,
+  ) {
+    this.auth.loginWithV2(appKey, appSecret, accessToken, accessSecret);
+  }
+
   /**
    * Initializes auth properties using a guest token.
    * Used when creating a new instance of this class, and when logging out.
